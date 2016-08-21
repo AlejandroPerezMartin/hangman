@@ -1,0 +1,365 @@
+@import "https://fonts.googleapis.com/css?family=Boogaloo";
+.clearfix {
+  content: '';
+  display: block;
+  overflow: hidden;
+}
+
+body {
+  background: #3b4163;
+  font-family: 'Boogaloo', sans-serif, cursive;
+  padding: 2.5% 5%;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  background: #f5f5f5;
+  border-radius: 20px;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  width: 100%;
+}
+.wrapper .content {
+  padding: 50px;
+  position: relative;
+}
+.wrapper:before {
+  background: #4d69fa;
+  bottom: -250px;
+  content: "";
+  height: 500px;
+  position: absolute;
+  right: -250px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 500px;
+}
+
+.bar {
+  background: #53555d;
+  border-radius: 0 10px 10px 0;
+  display: none;
+  height: 30px;
+  margin-left: -50px;
+  position: relative;
+  width: 240px;
+}
+.bar::after {
+  background: #53555d;
+  border-radius: 0 0 10px 10px;
+  bottom: -100%;
+  content: '';
+  height: 50px;
+  margin-bottom: -15px;
+  position: absolute;
+  right: 30px;
+  width: 30px;
+}
+
+.man {
+  float: left;
+  margin-top: 30px;
+  position: relative;
+  top: 50%;
+  width: 290px;
+}
+
+.head {
+  height: 212px;
+  margin: 0 auto 10px auto;
+  width: 192px;
+}
+.head .head--inner {
+  background: url("https://cdn.pbrd.co/images/aieMfp7HI.png") no-repeat center center;
+  background-size: cover;
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.neck {
+  background: #fece8a;
+  border-radius: 10px;
+  display: none;
+  height: 32px;
+  left: 50%;
+  margin-left: -23px;
+  position: absolute;
+  top: -23px;
+  z-index: 0;
+  width: 46px;
+}
+
+.body {
+  height: 400px;
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+  width: 105px;
+}
+.body .body--inner {
+  border-radius: 20px;
+  display: none;
+  height: 165px;
+  overflow: hidden;
+  position: absolute;
+  width: 105px;
+}
+.body .body--inner > div {
+  position: absolute;
+}
+.body .body--inner .half {
+  height: 100%;
+  top: 0;
+  width: 50%;
+}
+.body .body--inner .half.half--left {
+  background: #8ac657;
+  left: 0;
+}
+.body .body--inner .half.half--right {
+  background: #4ea06a;
+  right: 0;
+}
+.body .body--inner .body--bottom {
+  background: #3c5a92;
+  bottom: 0;
+  height: 30%;
+  width: 100%;
+}
+
+.arms {
+  height: 165px;
+  position: relative;
+  width: auto;
+}
+.arms .arm--wrapper {
+  height: 80%;
+  position: absolute;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  width: 45%;
+}
+.arms .arm--wrapper.arm--wrapper--left {
+  left: -5%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 20% 15%;
+          transform-origin: 20% 15%;
+}
+.arms .arm--wrapper.arm--wrapper--left .arm {
+  background: #8ac657;
+  border-radius: 10px 2px 10px 10px;
+}
+.arms .arm--wrapper.arm--wrapper--right {
+  height: 80%;
+  right: -5%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 80% 15%;
+          transform-origin: 80% 15%;
+  width: 45%;
+}
+.arms .arm--wrapper.arm--wrapper--right .arm {
+  background: #4ea06a;
+  border-radius: 2px 10px 10px 10px;
+}
+.arms .arm--wrapper .arm {
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.arms .arm--wrapper .arm .hand {
+  background: #fece8a;
+  border-radius: 100%;
+  bottom: -17px;
+  display: none;
+  height: 35px;
+  left: 50%;
+  margin-left: -17.5px;
+  position: absolute;
+  width: 35px;
+  z-index: -1;
+}
+
+.legs {
+  position: relative;
+}
+.legs .leg--wrapper {
+  border-radius: 3px 3px 0;
+  height: 175px;
+  position: absolute;
+  top: -20px;
+  width: 50px;
+}
+.legs .leg--wrapper.leg--wrapper--left {
+  left: 0;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+.legs .leg--wrapper.leg--wrapper--left .leg {
+  border-radius: 2px 10px 10px 10px;
+}
+.legs .leg--wrapper.leg--wrapper--right {
+  right: 0;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+}
+.legs .leg--wrapper.leg--wrapper--right .leg {
+  border-radius: 10px 2px 10px 10px;
+}
+.legs .leg--wrapper .leg {
+  background-color: #3c5a92;
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.legs .leg--wrapper .foot {
+  background: #fece8a;
+  bottom: -25px;
+  display: none;
+  height: 30px;
+  position: absolute;
+  width: 80px;
+  z-index: -1;
+}
+.legs .leg--wrapper .foot.foot--right {
+  border-radius: 2px 10px 10px 10px;
+  left: 2px;
+}
+.legs .leg--wrapper .foot.foot--left {
+  border-radius: 10px 2px 10px 10px;
+  right: 2px;
+}
+
+.word {
+  clear: both;
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+.word li {
+  background: #e6e6e7;
+  border-radius: 10px;
+  color: #fff;
+  display: inline-block;
+  font-size: 72px;
+  height: 100px;
+  line-height: 100px;
+  margin: 10px 10px 0 0;
+  text-align: center;
+  vertical-align: top;
+  width: 85px;
+}
+.word li:last-child {
+  margin-right: 0;
+}
+.word li.fill {
+  background: #53555d;
+}
+
+.overlay {
+  background: rgba(59, 65, 99, 0.8);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.overlay .overlay--content {
+  left: 50%;
+  margin: 0;
+  margin-right: -50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.overlay .overlay--content .message {
+  color: #fff;
+  display: block;
+  font-size: 72px;
+  margin-bottom: .25em;
+}
+.overlay .overlay--content button {
+  background: none;
+  border: 3px dashed #ffba00;
+  border-radius: 50px;
+  color: #ffba00;
+  cursor: pointer;
+  font-size: 28px;
+  padding: 15px 40px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  outline: none;
+  overflow: hidden;
+}
+.overlay .overlay--content button:hover, .overlay .overlay--content button:active {
+  background: #ffba00;
+  box-shadow: 0 0 0.125em rgba(0, 0, 0, 0.2);
+  color: #664a00;
+}
+
+.misses {
+  display: none;
+  float: right;
+  line-height: 1;
+  width: 50%;
+}
+.misses > div {
+  color: #4d69fa;
+  display: inline-block;
+  font-size: 92px;
+  margin: 10px;
+}
+.misses span {
+  color: grey;
+  display: block;
+  font-size: 24px;
+}
+
+.toast {
+  color: #4d69fa;
+  font-size: 92px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+
+.credits {
+  color: #f5f5f5;
+  display: block;
+  margin-top: 20px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  text-align: center;
+  text-decoration: none;
+}
+.credits:hover, .credits:active {
+  color: #ffba00;
+}
